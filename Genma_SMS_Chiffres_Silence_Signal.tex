@@ -1,0 +1,146 @@
+\documentclass{beamer}
+\mode<presentation> {
+\usepackage{color}
+\definecolor{bottomcolour}{rgb}{0.21,0.11,0.21}
+\definecolor{middlecolour}{rgb}{0.21,0.11,0.21}
+\setbeamercolor{structure}{fg=white}
+\setbeamertemplate{frametitle}[default]%[center]
+\setbeamercolor{normal text}{bg=black, fg=white}
+\setbeamertemplate{background canvas}[vertical shading]
+[bottom=bottomcolour, middle=middlecolour, top=black]
+\setbeamertemplate{items}[circle]
+\setbeamertemplate{navigation symbols}{} %no nav symbols
+\setbeamercolor{block title}{use=structure,fg=white,bg=structure.fg!50!red!50!blue!100!green}
+\setbeamercolor{block body}{parent=normal text,use=block title,bg=block title.bg!5!white!10!bg,fg=white}
+\setbeamertemplate{navigation symbols}{}
+}
+\usepackage{graphicx} 
+\usepackage{booktabs} 
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc}  
+\usepackage{geometry}     
+%\usepackage[francais]{babel} 
+\usepackage{eurosym}
+\usepackage{verbatim}
+\usepackage{ragged2e}
+\justifying
+
+\input{cc_beamer}
+
+\title[SMS chiffrés avec Silence \& Signal]{SMS chiffrés avec Silence \& Signal} 
+\author{Genma}
+
+\begin{document}
+
+%% Titlepage
+\begin{frame}
+	\titlepage
+	\vfill
+	\begin{center}
+		\CcGroupByNcSa{0.83}{0.95ex}\\[2.5ex]
+		{\tiny\CcNote{\CcLongnameByNcSa}}
+		\vspace*{-2.5ex}
+	\end{center}
+\end{frame}
+%----------------------------------------------------------------------------------------
+\begin{frame}
+Source : 
+\\ \url{https://www.libre-parcours.net/post/silence-ou-signal/}
+\\ Mise à disposition selon les termes de la Licence Creative Commons BY-SA 4.0 International
+par Taziden. 
+\\ MERCI !!!
+\end{frame}
+
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Les bases}
+
+\begin{block}{Signal permet d’échanger :}
+\begin{itemize}
+\item des appels vocaux chiffrés,
+\item des messages chiffrés,
+\item des SMS/MMS non chiffrés.
+\end{itemize}
+\end{block}
+
+\begin{block}{Silence permet d’échanger :}
+\begin{itemize}
+\item des SMS/MMS chiffrés,
+\item des SMS/MMS non chiffrés.
+\end{itemize}
+\end{block}
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+\begin{frame}
+\Huge{\centerline{Qui voit quoi ?}}
+\end{frame}
+%----------------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{Silence}
+\begin{block}{Lorsqu’on échange des messages via Silence, les opérateurs (de l’expéditeur et du destinataire) savent :}
+\begin{itemize}
+\item qui a envoyé un message,
+\item à qui a été envoyé le message,
+\item à quelle heure.
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Silence}
+
+\justifying{
+Si vous souhaitez discuter de manière confidentielle avec une personne de sorte qu’on ne puisse jamais savoir que vous avez été en contact, n’utilisez pas Silence. Une réquisition auprès d’un des opérateurs permettra d’identifier la personne.}
+\\~\\
+\justifying{
+Les messages ne passent pas par Internet, aucun autre acteur n’est impliqué dans l’échange. C’est donc pratique pour discuter avec des gens dont vous vous foutez qu’on sache que vous leur parlez, tout en gardant une certaine confidentialité.}
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{Signal}
+
+\justifying{
+Dans le cas de Signal, les opérateurs qui font office de fournisseurs d’accès à Internet (soit l’opérateur téléphonique soit le FAI du réseau wifi que vous utilisez) voient que votre téléphone communique avec l’entité qui est derrière Signal : OpenWhisper Systems (OWS par la suite) et voit des échanges avec Google.}
+\\~\\
+\justifying{
+Google fournit la fonctionnalité qui permet en quelque sorte de réveiller votre téléphone pour qu’il aille vérifier auprès d’OWS qu’un message l’attend. Cela est très utile pour économiser la batterie de votre téléphone. Google ne sait pas avec qui vous communiquez ni ce que vous vous dites.}
+
+\end{frame}
+
+
+%----------------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{Signal}
+\begin{block}{Les messages transitent par contre par OWS, l’association - fondation - entité qui édite Signal. OWS sait :}
+\begin{itemize}
+\item avec qui vous communiquez,
+\item à quel moment,
+\item mais ne peut pas voir le contenu de vos échanges.
+\end{itemize}
+\end{block}
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+\begin{frame}
+\Huge{\centerline{Conclusions}}
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{Conclusions}
+
+\justifying{Si vous ne faites aucune confiance dans les opérateurs de votre pays, vous devriez plutôt utiliser Signal.}
+\\~\\
+\justifying{En revanche, cela nécessite de faire confiance dans une entité américaine (OWS) sur laquelle vous n’avez aucune maitrise.}
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+\begin{frame}
+\Huge{\centerline{Merci de votre attention.}}
+\Huge{\centerline{Place aux questions.}}
+\end{frame}
+
+\end{document}
